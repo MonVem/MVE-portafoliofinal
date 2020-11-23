@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVE</title>
+    <link rel="icon" type="image/png" href="../img/sticker.png" />
+
+    <!-- BOOTSWATCH -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css"
+    />
+
+    <!-- ANIMATE CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=IIJlZuG-t4Hnoq_Aw1AYYCQ4wGH72WbCA4hOnVjntYneEZf_0ZuJa9VUIdGsX4lqdp1Eez7V22dy57XQO5woqw19DzJ-AcJEDC1Do4D6DV5ImI-9gfjlppS6WgDli88p5lZ6dcO5ZAP4OPkleg7Ebw" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvNzUzNDU2MDgyMzExMDUzMzI0Lzc2NzYwNjIxMzUxNjU5MTExNC9pbmRleC5odG1s"/>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/Crud.css" />
+
+   </head>
+  <body class="bg-light">
+
+      <nav class="navbar navbar-expand-sm bg-light navbar-blue">
+          <a class="navbar-logo" href="#">
+                  <img src="../img/sticker.png" alt="sticker" style="width:40px;">
+                </a>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/Home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Curriculum</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/Contact.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../pages/Portafolio.html">Portafolio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../pages/admin.html">Administrador</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../pages/Login.html">LogIn</a>
+                    </li>
+                </ul>
+  </nav>
+    
+    <!-- ADD TASK -->
+    <div class="container p-4">
+      <div class="col">
+        <div class="row-md-6">
+          <div class="card" id="cardcrud">
+            <div class="card-body">
+              <h1 class="h4">Agregar proyecto</h1>
+
+              <form id="task-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="task-title"
+                    class="form-control"
+                    class="Task Title"
+                    placeholder="Título del proyecto"
+                    autofocus
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="task-description"
+                    rows="3"
+                    class="form-control"
+                    placeholder="Descripción del proyecto"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <H6 for="task-category">Categoría</h6>
+                  <select class="form-control" id="task-category">
+                    <option value="Pintura">Pintura</option>
+                    <option value="Ilustración">Ilustración</option>
+                    <option value="3D/Modelos">3D/Modelos</option>
+                    <option value="Fotografía">Fotografías</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h6 for="task-image">Imagen</h6>
+                  <input
+                    type="file"
+                    class="form-control-file"
+                    id="task-image"
+                  />
+                </div>
+
+                <button class="btn btn-primary" id="btn-task-form">
+                  Crear
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Tasks List -->
+        <div class="col-md-6" id="tasks-container"></div>
+      </div>
+    </div>
+    
+    <footer id="static-footer" class="py-4 bg-light text-dark-50">
+        <div class="container text-center">
+          <medium>Copyright&copy; MVE</medium>
+          <ul class="container text-center">
+            <a class="foot-link" href="../pages/Home.html">Home</a>
+            <a class="foot-link" href="../index.html">Curriculum</a>
+            <a class="foot-link" href="../pages/Contact.html">Contacto</a>
+            <a class="foot-link" href="../pages/Portafolio.html">Portafolio</a>
+            <i class="far fa-envelope"></i><a href="mail:monse.villacampa@gmail.com" target="_blank" id="enlace"> gmail.com</a>
+            <i class="fab fa-instagram"></i><a href="https://www.instagram.com/monsevillacampa/" target="_blank" id="enlace"> monsevillacampa</a>
+          </ul>
+        </div>
+      </footer>
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA19cv3XtFGg7_dJLqP32r1tf6lVfUWXyY",
+    authDomain: "crud-tarea-bf62c.firebaseapp.com",
+    databaseURL: "https://crud-tarea-bf62c.firebaseio.com",
+    projectId: "crud-tarea-bf62c",
+    storageBucket: "crud-tarea-bf62c.appspot.com",
+    messagingSenderId: "844732365575",
+    appId: "1:844732365575:web:ab2b1ce42dccf856ab63a2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <!-- CUSTOM CODE -->
+    <script src="../scripts/Crud.js"></script>
+  </body>
+</html>
+

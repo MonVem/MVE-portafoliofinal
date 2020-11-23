@@ -1,0 +1,95 @@
+body {
+  margin: 0px;
+  background: white;
+}
+p, 
+ul, 
+li {
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+}
+h3,
+h5 {
+  font-family: "Oswald", sans-serif;
+  color: #fee05f;
+  text-align: center;
+}
+h1,
+h2{
+  font-family: "Oswald", sans-serif;
+  color: #fee05f;
+text-align: center;
+}
+h4{
+  font-family: 'Kalam', cursive;
+  text-align: center;
+}
+a {
+  color: #cae5ff;
+  text-decoration: underline;
+}
+img {
+  border-radius: 0%;
+}
+ul{
+  text-align: center;
+}
+#foto,
+#video {
+  text-align: center;
+}
+
+#col1 {
+  padding: 20px 40px;
+  
+  background: linear-gradient(
+    52deg,
+    rgba(237, 122, 110, 0.9) 0%,
+    rgba(119, 117, 228, 0.9) 100%
+  ),
+  url("../img/plant.jpg");
+}
+
+#col2 {
+  background: white;
+  padding: 20px 40px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+#perfil,
+#conocimientos,
+#contacto,
+#encabezado,
+#experiencias,
+#formacion,
+#imagenesextra {
+  padding: 40px 0px;
+}
+@media (min-width: 600px) {
+  p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+#page-content {
+  flex: 1 0 auto;
+}
+#sticky-footer {
+  flex-shrink: none;
+  list-style: none;
+
+}

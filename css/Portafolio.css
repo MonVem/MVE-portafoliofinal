@@ -1,0 +1,62 @@
+body {
+  margin: 0px;
+  background: linear-gradient(
+      52deg,
+      rgba(237, 122, 110, 0.9) 0%,
+      rgba(119, 117, 228, 0.9) 100%
+    ),
+    url("../img/plant.jpg");
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+  color: #fee05f;
+  text-align: center;
+}
+h5 {
+  font-family: "Kalam", cursive;
+  color: #ed7a6e;
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+#sticky-footer {
+  flex-shrink: none;
+  list-style: none;
+}
+#tasks-container{
+float: left;
+
+}
+/* Estilos nuevos */
+
+.options {
+  display: block;
+  list-style: none;
+  margin: 10px auto;
+}
+
+.block {
+  display: block;
+  width: 78%;
+  margin: 40px 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.options > li {
+  font-size: 1rem;
+  color: #676462;
+  text-transform: capitalize;
+}
+
+.options > li > span {
+  padding: 15px;
+}
